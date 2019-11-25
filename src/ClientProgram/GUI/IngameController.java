@@ -108,7 +108,7 @@ public class IngameController{
 
                 chatWindow.appendText("[Du] " + messageToServer + "\n");
                 ClientRequest messageRequest = new ClientRequest(ClientRequest.TYPE.MESSAGE_TO_ALL, messageToServer);
-                Main.clientConnection.sendObjectToServer(messageRequest);
+                //Main.clientConnection.sendObjectToServer(messageRequest);
             }
         }
 
