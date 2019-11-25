@@ -65,6 +65,7 @@ public class Game {
                 for (PlayerServer pServer: playerServers) {
                     playerScoreReports.add(pServer.player.getScoreReport());
                 }
+
                 playerServer.sendObjectToClient(playerScoreReports);
                 break;
             case SUBMIT_ANSWER:
