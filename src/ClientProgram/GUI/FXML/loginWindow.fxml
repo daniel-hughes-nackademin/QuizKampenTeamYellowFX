@@ -91,7 +91,7 @@
                         <Cursor fx:constant="OPEN_HAND" />
                     </cursor>
                 </Button>
-                <Button fx:id="howtoPlaybutton" blendMode="MULTIPLY" layoutX="111.0" layoutY="143.0" mnemonicParsing="false" onAction="#howtoPlay" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #7FDBFF;" text="How to play" textFill="#000000b0">
+                <Button fx:id="howtoPlaybutton" blendMode="MULTIPLY" layoutX="111.0" layoutY="143.0" mnemonicParsing="false" onAction="#howtoPlay" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #7FDBFF;" text="Spelregler" textFill="#000000b0">
                     <font>
                         <Font name="Monospaced Regular" size="15.0" />
                     </font>

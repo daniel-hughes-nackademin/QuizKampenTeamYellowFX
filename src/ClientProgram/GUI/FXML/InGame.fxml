@@ -119,6 +119,9 @@
                <effect>
                   <InnerShadow choke="0.5" color="#7fdbff" height="62.7" radius="30.802500000000002" width="62.51" />
                </effect>
+               <font>
+                  <Font size="16.0" />
+               </font>
             </TextField>
             <TextArea fx:id="chatwindowTextArea" editable="false" layoutX="335.0" layoutY="474.0" prefHeight="240.0" prefWidth="452.0" visible="false" wrapText="true">
                <effect>
