@@ -180,19 +180,20 @@ public class Game {
                         }
 
                         List<String> winners = new ArrayList<>();
+                        String winner = "";
 
                         for (ScoreReport sc: scoreReports) {
                             if(sc.getTotalScore() == highScore) {
-                                winners.add(sc.getPlayerName() + " " + sc.getTotalScore());
+                                winners.add(sc.getPlayerName());
                             }
                         }
 
-                        String winner = "";
                         if (winners.size() > 1) {
-                            winner = "Vinst delas av: ";
+                            winner = "Vinst delas av ";
                             for(String s: winners) {
                                 winner += s + ", ";
                             }
+                            winner += "med " + highScore + " poäng!";
                         }
                         else {
                             winner = "VINNARE: " + topdog + " med " + highScore + " poäng!";

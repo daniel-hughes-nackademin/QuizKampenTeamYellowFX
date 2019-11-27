@@ -10,7 +10,7 @@ public class ServerMain implements Runnable {
 
     private Properties gameConfigProperty = new Properties();
     private int playersPerGame;
-    private int portNr = 13377;
+    private int portNr = 54322;
 
 
     public ServerMain(){
