@@ -170,15 +170,33 @@ public class Game {
                     }
                     else {
                         //Notify game over
-                        String topDog = "";
                         int highScore = 0;
+                        String topdog = "";
                         for(ScoreReport sc: scoreReports) {
                             if (sc.getTotalScore() > highScore) {
                                 highScore = sc.getTotalScore();
-                                topDog = sc.getPlayerName();
+                                topdog = sc.getPlayerName();
                             }
                         }
-                        String winner = "VINNARE: " + topDog + " med " + highScore + " poäng!";
+
+                        List<String> winners = new ArrayList<>();
+
+                        for (ScoreReport sc: scoreReports) {
+                            if(sc.getTotalScore() == highScore) {
+                                winners.add(sc.getPlayerName() + " " + sc.getTotalScore());
+                            }
+                        }
+
+                        String winner = "";
+                        if (winners.size() > 1) {
+                            winner = "Vinst delas av: ";
+                            for(String s: winners) {
+                                winner += s + ", ";
+                            }
+                        }
+                        else {
+                            winner = "VINNARE: " + topdog + " med " + highScore + " poäng!";
+                        }
 
                         sendToAllPlayers(new ServerResponse(ServerResponse.TYPE.NOTIFY_GAME_OVER, winner));
                     }
