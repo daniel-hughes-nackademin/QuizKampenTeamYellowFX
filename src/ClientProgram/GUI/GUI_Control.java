@@ -20,11 +20,11 @@ public class GUI_Control {
     private static Scene ingameScene = new Scene(ingameParent);
     private static IngameController ingameController = ingameLoader.getController();
 
-    private static FXMLLoader winnerLobbyLoader = new FXMLLoader(GUI_Control.class.getResource("FXML/WinnerLobby.fxml"));
-    private static Parent winnerLobbyParent;
-    static { try { winnerLobbyParent = winnerLobbyLoader.load(); } catch (IOException e){ e.printStackTrace(); }}
-    private static Scene winnerLobbyScene = new Scene(winnerLobbyParent);
-    private static WinnerLobbyController winnerLobbyController = winnerLobbyLoader.getController();
+//    private static FXMLLoader winnerLobbyLoader = new FXMLLoader(GUI_Control.class.getResource("FXML/WinnerLobby.fxml"));
+//    private static Parent winnerLobbyParent;
+//    static { try { winnerLobbyParent = winnerLobbyLoader.load(); } catch (IOException e){ e.printStackTrace(); }}
+//    private static Scene winnerLobbyScene = new Scene(winnerLobbyParent);
+//    private static WinnerLobbyController winnerLobbyController = winnerLobbyLoader.getController();
 
     private static FXMLLoader scoreBoardLoader = new FXMLLoader(GUI_Control.class.getResource("FXML/ScoreBoard.fxml"));
     private static Parent scoreBoardParent;
@@ -38,9 +38,9 @@ public class GUI_Control {
         return ingameController;
     }
 
-    public static WinnerLobbyController getWinnerLobbyController() {
-        return winnerLobbyController;
-    }
+//    public static WinnerLobbyController getWinnerLobbyController() {
+//        return winnerLobbyController;
+//    }
 
     public static ScoreBoardController getScoreBoardController() {
         return scoreBoardController;
@@ -50,9 +50,9 @@ public class GUI_Control {
         return ingameScene;
     }
 
-    public static Scene getWinnerLobbyScene() {
-        return winnerLobbyScene;
-    }
+//    public static Scene getWinnerLobbyScene() {
+//        return winnerLobbyScene;
+//    }
 
     public static Scene getScoreBoardScene() {
         return scoreBoardScene;

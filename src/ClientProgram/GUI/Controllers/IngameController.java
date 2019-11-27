@@ -75,12 +75,12 @@ public class IngameController{
     int totalPoints = 0;
 
 
-    @FXML
-    void continuetoWinninglobby(ActionEvent event) throws Exception{
-        GUI_Control.changeScene(GUI_Control.getWinnerLobbyScene());
-
-
-    }
+//    @FXML
+//    void continuetoWinninglobby(ActionEvent event) throws Exception{
+//        GUI_Control.changeScene(GUI_Control.getWinnerLobbyScene());
+//
+//
+//    }
 
 
 
@@ -153,12 +153,12 @@ public class IngameController{
     @FXML
     void openchatWindow(ActionEvent event) {
 
-        if (chatWindowButton.getText().equalsIgnoreCase("chatWindow")) {
+        if (chatWindowButton.getText().equals("Chat-fönster")) {
             show();
-            chatWindowButton.setText("Close");
-        }else if (chatWindowButton.getText().equalsIgnoreCase("Close")){
+            chatWindowButton.setText("Stäng");
+        }else if (chatWindowButton.getText().equals("Stäng")){
             hide();
-            chatWindowButton.setText("ChatWindow");
+            chatWindowButton.setText("Chat-fönster");
         }
 
     }

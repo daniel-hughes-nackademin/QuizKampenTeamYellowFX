@@ -73,14 +73,14 @@ public class LoginWindowController {
         GridPane settingsRoot = new GridPane();
         Scene settingsScene = new Scene(settingsRoot);
 
-        settingsWindow.setTitle("Settings");
+        settingsWindow.setTitle("Inställningar");
         settingsWindow.setHeight(200);
         settingsWindow.setWidth(300);
         settingsWindow.initModality(Modality.APPLICATION_MODAL);
 
-        Label nextToPlayerName = new Label("Save userName");
-        Label nextToPlayerRounds = new Label("Rounds");
-        Label nextToPlayerQuestPerRound = new Label("Questions Per Round");
+        Label nextToPlayerName = new Label("Spara användarnamn");
+        Label nextToPlayerRounds = new Label("Antal rundor");
+        Label nextToPlayerQuestPerRound = new Label("Frågor per runda");
         TextField playerName = new TextField(Main.name);
         TextField playerRounds = new TextField(String.valueOf(Main.rounds));
         TextField playerQuestionsPerRound = new TextField(
@@ -90,7 +90,7 @@ public class LoginWindowController {
         playerRounds.setLayoutY(40);
         playerQuestionsPerRound.setLayoutY(80);
 
-        Button applySettingsButton = new Button("Apply");
+        Button applySettingsButton = new Button("Ändra");
         applySettingsButton.setLayoutY(100);
         applySettingsButton.setLayoutX(200);
         applySettingsButton.setDisable(true);
@@ -127,7 +127,7 @@ public class LoginWindowController {
 
                     playerQuestionsPerRound.setText("3");
                     JOptionPane.showMessageDialog(null,
-                            "Rounds Have To Be A Number!");
+                            "Rundor måste vara en siffra!");
                     return;
                 }
                 try {
@@ -135,14 +135,14 @@ public class LoginWindowController {
                 } catch (NumberFormatException e) {
                     playerRounds.setText("3");
                     JOptionPane.showMessageDialog(null,
-                            "Questions Per Round Have To Be A Number!");
+                            "Frågor per runda måste vara en siffra!");
                     return;
                 }
                 if(Integer.parseInt(playerQuestionsPerRound.getText()) < 3||
                         Integer.parseInt(playerQuestionsPerRound.getText()) > 9
                 ){
                     JOptionPane.showMessageDialog(null,
-                            "Questions per round has to be between 3 and 9!");
+                            "Frågor per runda måste vara mellan 3 och 9!");
                     playerQuestionsPerRound.setText("3");
                     return;
                 }
@@ -151,7 +151,7 @@ public class LoginWindowController {
                         Integer.parseInt(playerRounds.getText()) > 9
                 ){
                     JOptionPane.showMessageDialog(null,
-                            "Rounds have to be between 1 and 9!");
+                            "Rundor måste vara mellan 1 och 9!");
                     playerRounds.setText("3");
                     return;
                 }
@@ -249,7 +249,7 @@ public class LoginWindowController {
         }
 
         initializeConnection(usernameField.getText());
-        label.setText("Connected as " + usernameField.getText());
+        label.setText("Ansluten som " + usernameField.getText());
         label.setVisible(true);
 
         

@@ -22,7 +22,7 @@
     <children>
         <AnchorPane accessibleRole="TEXT_AREA" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #7FDBFF;">
             <children>
-                <TextField fx:id="usernameField" blendMode="HARD_LIGHT" layoutX="3.0" layoutY="380.0" onAction="#ConnectToServer" prefHeight="71.0" prefWidth="598.0" promptText="USERNAME:">
+                <TextField fx:id="usernameField" blendMode="HARD_LIGHT" layoutX="3.0" layoutY="380.0" onAction="#ConnectToServer" prefHeight="71.0" prefWidth="598.0" promptText="Användarnamn">
                     <font>
                         <Font name="System Bold" size="27.0" />
                     </font>
@@ -38,7 +38,7 @@
                         </InnerShadow>
                     </effect>
                 </TextField>
-                <Text fill="#1334405e" fontSmoothingType="LCD" layoutX="123.0" layoutY="45.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" text="QUIZKAMPEN" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="570.0">
+                <Text fill="#1334405e" fontSmoothingType="LCD" layoutX="111.0" layoutY="63.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" text="QUIZKAMPEN" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="598.0">
                     <font>
                         <Font name="OCR A Extended" size="94.0" />
                     </font>
@@ -71,12 +71,12 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </TextArea>
-                <Label layoutX="6.0" layoutY="332.0" prefHeight="48.0" prefWidth="269.0" text="Enter username below:" textFill="WHITE">
+                <Label layoutX="6.0" layoutY="332.0" prefHeight="48.0" prefWidth="269.0" text="Ange användarnamn" textFill="WHITE">
                     <font>
                         <Font name="Agency FB Bold" size="25.0" />
                     </font>
                 </Label>
-                <Button fx:id="ConnectButton" layoutX="441.0" layoutY="451.0" mnemonicParsing="false" onAction="#ConnectToServer" prefHeight="36.0" prefWidth="161.0" style="-fx-background-color: #7FDBFF;" text="Connect">
+                <Button fx:id="ConnectButton" layoutX="441.0" layoutY="451.0" mnemonicParsing="false" onAction="#ConnectToServer" prefHeight="36.0" prefWidth="161.0" style="-fx-background-color: #7FDBFF;" text="Anslut">
                     <effect>
                         <Reflection>
                             <input>
@@ -113,7 +113,7 @@
                         <Cursor fx:constant="WAIT" />
                     </cursor>
                 </ProgressIndicator>
-                <Button fx:id="settingsButton" blendMode="MULTIPLY" layoutX="550.0" layoutY="143.0" mnemonicParsing="false" onAction="#settings" prefHeight="29.0" prefWidth="129.0" style="-fx-background-color: #7FDBFF;" text="Settings">
+                <Button fx:id="settingsButton" blendMode="MULTIPLY" layoutX="550.0" layoutY="143.0" mnemonicParsing="false" onAction="#settings" prefHeight="29.0" prefWidth="145.0" style="-fx-background-color: #7FDBFF;" text="Inställningar">
                     <font>
                         <Font name="Monospaced Regular" size="15.0" />
                     </font>
@@ -124,7 +124,7 @@
                         <Cursor fx:constant="OPEN_HAND" />
                     </cursor>
                 </Button>
-                <Label fx:id="waitingforPlayerlabel" alignment="CENTER" layoutX="157.0" layoutY="652.0" prefHeight="80.0" prefWidth="489.0" text="Waiting for other player" textAlignment="JUSTIFY" textFill="WHITE" visible="false" wrapText="true">
+                <Label fx:id="waitingforPlayerlabel" alignment="CENTER" layoutX="157.0" layoutY="652.0" prefHeight="80.0" prefWidth="489.0" text="Väntar på andra spelare" textAlignment="JUSTIFY" textFill="WHITE" visible="false" wrapText="true">
                     <font>
                         <Font name="Monospaced Bold" size="28.0" />
                     </font>
