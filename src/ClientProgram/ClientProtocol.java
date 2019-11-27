@@ -26,7 +26,9 @@ public class ClientProtocol {
                     ingameController.chatwindowTextArea.appendText(((ServerResponse) objectFromServer).message + "\n");
                     break;
                 case NOTIFY_GAME_OVER:
-                    //Switch to game over window
+                    Platform.runLater(()->{
+                        GUI_Control.getScoreBoardController().titleLabel.setText(((ServerResponse) objectFromServer).message);
+                    });
                     break;
                 case SCORE_REPORT:
                     System.out.println(((ServerResponse) objectFromServer).message);

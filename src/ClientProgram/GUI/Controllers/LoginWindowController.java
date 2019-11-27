@@ -229,7 +229,7 @@ public class LoginWindowController {
         //String hostName = "85.24.133.169";
         String hostName = "127.0.0.1";
        // int portNr = 54322;
-        int portNr = 13377;
+        int portNr = 54322;
 
         //Static import of Main.clientConnection so we can access it from anywhere
         clientConnection = new ClientConnection(hostName, portNr);

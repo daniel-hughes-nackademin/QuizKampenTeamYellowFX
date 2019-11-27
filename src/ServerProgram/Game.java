@@ -147,10 +147,13 @@ public class Game {
                         pServer.sendObjectToClient(new ServerResponse(ServerResponse.TYPE.SCORE_REPORT, scoreReportsString));
                     }
 
-                    try {
-                        Thread.sleep(4000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+                    // bara sleep om
+                    if (!(currentRoundindex == nrOfRounds)) {
+                        try {
+                            Thread.sleep(4000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
 
                     if(currentGenreIndex >= genres.length){
@@ -167,7 +170,17 @@ public class Game {
                     }
                     else {
                         //Notify game over
-                        sendToAllPlayers(new ServerResponse(ServerResponse.TYPE.NOTIFY_GAME_OVER, null));
+                        String topDog = "";
+                        int highScore = 0;
+                        for(ScoreReport sc: scoreReports) {
+                            if (sc.getTotalScore() > highScore) {
+                                highScore = sc.getTotalScore();
+                                topDog = sc.getPlayerName();
+                            }
+                        }
+                        String winner = "VINNARE: " + topDog + " med " + highScore + " poäng!";
+
+                        sendToAllPlayers(new ServerResponse(ServerResponse.TYPE.NOTIFY_GAME_OVER, winner));
                     }
                 }
 

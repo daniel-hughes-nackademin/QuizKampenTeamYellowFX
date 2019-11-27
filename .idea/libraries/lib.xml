@@ -1,20 +1,16 @@
 <component name="libraryTable">
   <library name="lib">
     <CLASSES>
-      <root url="file://$PATH_TO_FX$" />
+      <root url="file:///Library/Java/JavaVirtualMachines/javafx-sdk-13.0.1/lib" />
     </CLASSES>
     <JAVADOC />
+    <NATIVE>
+      <root url="file:///Library/Java/JavaVirtualMachines/javafx-sdk-13.0.1/lib" />
+    </NATIVE>
     <SOURCES>
-      <root url="file://$PATH_TO_FX$/src/javafx.base" />
-      <root url="file://$PATH_TO_FX$/src/javafx.controls" />
-      <root url="file://$PATH_TO_FX$/src/javafx.fxml" />
-      <root url="file://$PATH_TO_FX$/src/javafx.graphics" />
-      <root url="file://$PATH_TO_FX$/src/javafx.media" />
-      <root url="file://$PATH_TO_FX$/src/javafx.swing" />
-      <root url="file://$PATH_TO_FX$/src/javafx.web" />
-      <root url="file://$PATH_TO_FX$" />
+      <root url="file:///Library/Java/JavaVirtualMachines/javafx-sdk-13.0.1/lib" />
     </SOURCES>
-    <jarDirectory url="file://$PATH_TO_FX$" recursive="false" />
-    <jarDirectory url="file://$PATH_TO_FX$" recursive="false" type="SOURCES" />
+    <jarDirectory url="file:///Library/Java/JavaVirtualMachines/javafx-sdk-13.0.1/lib" recursive="false" />
+    <jarDirectory url="file:///Library/Java/JavaVirtualMachines/javafx-sdk-13.0.1/lib" recursive="false" type="SOURCES" />
   </library>
 </component>
