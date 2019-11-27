@@ -226,10 +226,10 @@ public class LoginWindowController {
     }
 
     public void initializeConnection(String username){
-        //String hostName = "85.24.133.169";
-        String hostName = "127.0.0.1";
-       // int portNr = 54322;
+        String hostName = "85.24.133.169";
+        //String hostName = "127.0.0.1";
         int portNr = 54322;
+        //int portNr = 54322;
 
         //Static import of Main.clientConnection so we can access it from anywhere
         clientConnection = new ClientConnection(hostName, portNr);

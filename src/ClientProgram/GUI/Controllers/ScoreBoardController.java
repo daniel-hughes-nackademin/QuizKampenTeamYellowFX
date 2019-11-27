@@ -10,5 +10,6 @@ public class ScoreBoardController {
     public TextArea scoreboardArea;
 
     @FXML
-    public Label titleLabel;
+    public Label winnerLabel;
+    public Label scoreBoardLabel;
 }

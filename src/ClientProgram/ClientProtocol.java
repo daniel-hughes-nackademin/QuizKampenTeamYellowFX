@@ -6,10 +6,8 @@ import Model.Question;
 import Model.ScoreReport;
 import ServerUtilities.ServerResponse;
 import javafx.application.Platform;
-import javafx.concurrent.Task;
 import javafx.scene.control.Button;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +25,9 @@ public class ClientProtocol {
                     break;
                 case NOTIFY_GAME_OVER:
                     Platform.runLater(()->{
-                        GUI_Control.getScoreBoardController().titleLabel.setText(((ServerResponse) objectFromServer).message);
+                        GUI_Control.getScoreBoardController().winnerLabel.setText(((ServerResponse) objectFromServer).message);
+                        GUI_Control.getScoreBoardController().scoreBoardLabel.setVisible(false);
+                        GUI_Control.getScoreBoardController().winnerLabel.setVisible(true);
                     });
                     break;
                 case SCORE_REPORT:

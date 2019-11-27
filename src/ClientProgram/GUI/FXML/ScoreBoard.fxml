@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientProgram.GUI.Controllers.ScoreBoardController">
    <children>
       <TextArea fx:id="scoreboardArea" editable="false" layoutX="22.0" layoutY="145.0" prefHeight="428.0" prefWidth="755.0" />
-      <Label fx:id="titleLabel" alignment="CENTER" layoutX="23.0" layoutY="67.0" prefHeight="46.0" prefWidth="755.0" text="Poängställning" textAlignment="CENTER" textFill="#f70000">
+      <Label fx:id="winnerLabel" alignment="CENTER" layoutX="22.0" layoutY="93.0" prefHeight="46.0" prefWidth="755.0" text="Vinnare" textAlignment="CENTER" textFill="#f70000" visible="false">
          <font>
             <Font name="System Italic" size="28.0" />
          </font>
@@ -21,6 +21,11 @@
                </input>
             </Reflection>
          </effect>
+      </Label>
+      <Label fx:id="scoreBoardLabel" alignment="CENTER" layoutX="287.0" layoutY="96.0" prefHeight="23.0" prefWidth="225.0" text="Poängställning">
+         <font>
+            <Font name="System Italic" size="28.0" />
+         </font>
       </Label>
    </children>
 </AnchorPane>
