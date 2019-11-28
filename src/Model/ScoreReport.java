@@ -67,7 +67,7 @@ public class ScoreReport implements Serializable {
     @Override
     public synchronized String toString() {
         StringBuilder scoreReportText = new StringBuilder("Spelare: ");
-        scoreReportText.append(this.playerName).append("\t").append("Totalpoäng: ").append(this.totalScore).append("\n");
+        scoreReportText.append(this.playerName).append("\t\t").append("Totalpoäng: ").append(this.totalScore).append("\n");
         for (int i = 0; i < this.currentRoundIndex; i++) {
             System.out.println("Round index " + i);
             scoreReportText.append("Runda ").append(i + 1).append(": ").append(roundScores[i]).append("\t");

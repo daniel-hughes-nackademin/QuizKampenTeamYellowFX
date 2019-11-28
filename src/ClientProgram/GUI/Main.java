@@ -22,6 +22,7 @@ public class Main extends Application {
             Pane root = loader.load();
             Scene scene = new Scene(root, 800, 800);
             primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
             primaryStage.show();
 
             //This means that closing the window closes the program
