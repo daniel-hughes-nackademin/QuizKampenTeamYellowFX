@@ -25,7 +25,7 @@ public class ClientProtocol {
                     break;
                 case NOTIFY_GAME_OVER:
                     Platform.runLater(()->{
-                        GUI_Control.getScoreBoardController().winnerLabel.setText(((ServerResponse) objectFromServer).message + " korrekta svar!");
+                        GUI_Control.getScoreBoardController().winnerLabel.setText(((ServerResponse) objectFromServer).message);
                         GUI_Control.getScoreBoardController().scoreBoardLabel.setVisible(false);
                         GUI_Control.getScoreBoardController().winnerLabel.setVisible(true);
                     });
