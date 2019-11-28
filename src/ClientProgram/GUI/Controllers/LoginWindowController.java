@@ -226,8 +226,8 @@ public class LoginWindowController {
     }
 
     public void initializeConnection(String username){
-        String hostName = "172.20.201.239";
-        //String hostName = "127.0.0.1";
+        //String hostName = "172.20.201.239";
+        String hostName = "127.0.0.1";
         int portNr = 54322;
         //int portNr = 54322;
 

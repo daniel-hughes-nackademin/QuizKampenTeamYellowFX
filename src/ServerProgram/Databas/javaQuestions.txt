@@ -8,7 +8,7 @@ char
 byte
 short
 float
-Vilken metod gör Stringen "hej du" till "hejdu" ?
+Vilken metod gör Stringen "    hej du        " till "hej du" ?
 trim();
 concat();
 mix();

@@ -137,14 +137,8 @@ public class Game {
                         System.out.println(pServer.getPlayer().getScoreReport());
                     }
 
-                    String scoreReportsString = "";
-                    for(ScoreReport sr:scoreReports) {
-                        scoreReportsString += sr.toString();
-                    }
-
                     for (PlayerServer pServer: playerServers) {
-                        //pServer.sendListToClient(scoreReports);
-                        pServer.sendObjectToClient(new ServerResponse(ServerResponse.TYPE.SCORE_REPORT, scoreReportsString));
+                        pServer.sendObjectToClient(scoreReports);
                     }
 
                     // bara sleep om
@@ -170,35 +164,7 @@ public class Game {
                     }
                     else {
                         //Notify game over
-                        int highScore = 0;
-                        String topdog = "";
-                        for(ScoreReport sc: scoreReports) {
-                            if (sc.getTotalScore() > highScore) {
-                                highScore = sc.getTotalScore();
-                                topdog = sc.getPlayerName();
-                            }
-                        }
-
-                        List<String> winners = new ArrayList<>();
-                        String winner = "";
-
-                        for (ScoreReport sc: scoreReports) {
-                            if(sc.getTotalScore() == highScore) {
-                                winners.add(sc.getPlayerName());
-                            }
-                        }
-
-                        if (winners.size() > 1) {
-                            winner = "Vinst delas av ";
-                            for(String s: winners) {
-                                winner += s + ", ";
-                            }
-                            winner += "med " + highScore;
-                        }
-                        else {
-                            winner = "VINNARE: " + topdog + " med " + highScore;
-                        }
-
+                        String winner = gameOverResults(scoreReports);
                         sendToAllPlayers(new ServerResponse(ServerResponse.TYPE.NOTIFY_GAME_OVER, winner));
                     }
                 }
@@ -239,10 +205,42 @@ public class Game {
 
     public void sendToAllPlayers(Object objectToClient){
         for (PlayerServer playerServer: playerServers) {
-            playerServer.sendObjectToClient(objectToClient);
+
+                playerServer.sendObjectToClient(objectToClient);
+
         }
         System.out.println("Object has now been sent to all clients");
     }
 
+    public String gameOverResults (List<ScoreReport> scoreReports) {
+        int highScore = 0;
+        String topdog = "";
+        for(ScoreReport sc: scoreReports) {
+            if (sc.getTotalScore() > highScore) {
+                highScore = sc.getTotalScore();
+                topdog = sc.getPlayerName();
+            }
+        }
+
+        List<String> winners = new ArrayList<>();
+        String winner = "";
+
+        for (ScoreReport sc: scoreReports) {
+            if(sc.getTotalScore() == highScore) {
+                winners.add(sc.getPlayerName());
+            }
+        }
+
+        if (winners.size() > 1) {
+            winner = "Vinst delas av ";
+            for(String s: winners) {
+                winner += s + ", ";
+            }
+            return winner += "med " + highScore;
+        }
+        else {
+            return winner = "VINNARE: " + topdog + " med " + highScore;
+        }
+    }
 
 }

@@ -12,7 +12,7 @@ public class PlayerServer implements Runnable{
 
     Player player = new Player();
     private final Socket socket;
-    ObjectOutputStream out;
+    public ObjectOutputStream out;
     Game game;
 
     public PlayerServer(Socket socket, Game game) {
@@ -50,7 +50,7 @@ public class PlayerServer implements Runnable{
 
     public void sendObjectToClient(Object objectToClient){
         try {
-            //out.reset();
+            out.reset();
             out.writeObject(objectToClient);
             out.flush();
         } catch (IOException e) {
@@ -58,14 +58,6 @@ public class PlayerServer implements Runnable{
         }
     }
 
-    public void sendListToClient(Object objectToClient){
-        try {
-            out.reset();
-            out.writeObject(objectToClient);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     public Player getPlayer() {
         return player;

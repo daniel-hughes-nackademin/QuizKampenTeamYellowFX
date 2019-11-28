@@ -9,7 +9,6 @@ public class ServerResponse implements Serializable {
     public enum TYPE{
         MESSAGE_FROM_CLIENT,
         NOTIFY_GAME_OVER,
-        SCORE_REPORT
     }
 
     public TYPE type;
