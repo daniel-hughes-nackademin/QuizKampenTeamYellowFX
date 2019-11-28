@@ -99,7 +99,7 @@
                   <Reflection />
                </effect>
             </Label>
-            <Button fx:id="chatWindowButton" blendMode="OVERLAY" layoutX="2.0" layoutY="674.0" mnemonicParsing="false" onAction="#openchatWindow" prefHeight="59.0" prefWidth="146.0" text="ChatWindow">
+            <Button fx:id="chatWindowButton" blendMode="OVERLAY" layoutX="2.0" layoutY="674.0" mnemonicParsing="false" onAction="#openchatWindow" prefHeight="59.0" prefWidth="179.0" text="Chat-fönster">
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
                </cursor>
@@ -107,7 +107,7 @@
                   <Font name="Monospaced Regular" size="19.0" />
                </font>
             </Button>
-            <Button fx:id="sendmsgButton" blendMode="OVERLAY" layoutX="709.0" layoutY="773.0" mnemonicParsing="false" onAction="#sendMsg" opacity="0.74" prefHeight="79.0" prefWidth="114.0" text="Send" textFill="#070707" visible="false">
+            <Button fx:id="sendmsgButton" blendMode="OVERLAY" layoutX="685.0" layoutY="723.0" mnemonicParsing="false" onAction="#sendMsg" opacity="0.74" prefHeight="42.0" prefWidth="101.0" text="Skicka" textFill="#070707" visible="false">
                <font>
                   <Font name="Monospaced Regular" size="20.0" />
                </font>
@@ -115,12 +115,15 @@
                   <Cursor fx:constant="OPEN_HAND" />
                </cursor>
             </Button>
-            <TextField fx:id="msgTextField" layoutX="347.0" layoutY="765.0" prefHeight="88.0" prefWidth="362.0" promptText="Message" onAction="#sendMsg" visible="false">
+            <TextField fx:id="msgTextField" layoutX="335.0" layoutY="714.0" onAction="#sendMsg" prefHeight="59.0" prefWidth="350.0" promptText="Skriv meddelande" visible="false">
                <effect>
                   <InnerShadow choke="0.5" color="#7fdbff" height="62.7" radius="30.802500000000002" width="62.51" />
                </effect>
+               <font>
+                  <Font size="16.0" />
+               </font>
             </TextField>
-            <TextArea fx:id="chatwindowTextArea" editable="false" layoutX="341.0" layoutY="535.0" prefHeight="240.0" prefWidth="482.0" visible="false" wrapText="true">
+            <TextArea fx:id="chatwindowTextArea" editable="false" layoutX="335.0" layoutY="474.0" prefHeight="240.0" prefWidth="452.0" visible="false" wrapText="true">
                <effect>
                   <InnerShadow choke="0.68" color="#7fdbff" height="79.38" radius="36.455" width="68.44" />
                </effect>
