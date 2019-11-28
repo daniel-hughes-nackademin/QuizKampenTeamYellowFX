@@ -3,6 +3,46 @@ James Gosling
 Ryan Gosling
 Tony Hawk
 Sigrun Olafsdottir
+Vilken av dessa är inte som de andra?
+char
+byte
+short
+float
+Vilken metod gör Stringen "hej du" till "hejdu" ?
+trim();
+concat();
+mix();
+noSpace();
+x = 2; y = 4;  z = ++x + y++; vad är z?
+7
+6
+10
+8
+String x = "madagaskar"; vad är x.subString(5)?
+"askar"
+"dagaska"
+"madag"
+Compile Error
+En metod som är void kan inte innehålla kommandot return
+falskt
+sant
+ibland
+Compile Error
+Kompileringsfel heter fenomenet när:
+division med 0
+stavat string med litet S
+en oändlig loop
+boolean bool = 13;
+String b = "kgkgkgk"; vad är b.length()?
+7
+6
+8
+"kg"
+bool x = true; bool y = false;
+x != y
+x < y
+x > y
+x == y
 Var kommer namnet Java ifrån?
 Kaffe
 Coca cola

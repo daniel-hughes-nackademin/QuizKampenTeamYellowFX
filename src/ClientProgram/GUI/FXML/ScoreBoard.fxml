@@ -14,9 +14,9 @@
          <font>
             <Font size="20.0" />
          </font></TextArea>
-      <Label fx:id="winnerLabel" alignment="CENTER" layoutX="22.0" layoutY="93.0" prefHeight="46.0" prefWidth="755.0" text="Vinnare" textAlignment="CENTER" textFill="#f70000" visible="false">
+      <Label fx:id="winnerLabel" alignment="CENTER" blendMode="HARD_LIGHT" layoutX="22.0" layoutY="93.0" prefHeight="46.0" prefWidth="755.0" text="Vinnare" textAlignment="CENTER" textFill="RED" visible="false">
          <font>
-            <Font name="System Italic" size="28.0" />
+            <Font name="System Italic" size="37.0" />
          </font>
          <effect>
             <Reflection bottomOpacity="0.07" fraction="0.56" topOpacity="0.36">

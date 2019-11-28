@@ -193,10 +193,10 @@ public class Game {
                             for(String s: winners) {
                                 winner += s + ", ";
                             }
-                            winner += "med " + highScore + " poäng!";
+                            winner += "med " + highScore;
                         }
                         else {
-                            winner = "VINNARE: " + topdog + " med " + highScore + " poäng!";
+                            winner = "VINNARE: " + topdog + " med " + highScore;
                         }
 
                         sendToAllPlayers(new ServerResponse(ServerResponse.TYPE.NOTIFY_GAME_OVER, winner));
